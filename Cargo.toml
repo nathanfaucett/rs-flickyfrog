@@ -1,0 +1,47 @@
+[package]
+authors = ["Nathan Faucett <nathanfaucett@gmail.com>"]
+description = "Flicky Frog is a Game."
+
+categories = ["game"]
+keywords = ["flicky", "frog", "game"]
+
+edition = "2021"
+license = "MIT/Apache-2.0"
+name = "flicky-frog"
+repository = "https://github.com/nathanfaucett/ts-flicky-frog"
+rust-version = "1.74"
+version = "0.1.0"
+
+default-run = "flicky-frog"
+
+[lib]
+name = "flicky_frog"
+
+[[bin]]
+name = "flicky-frog"
+
+[dependencies]
+bevy = {version = "0.13", features = ["dynamic_linking"]}
+bevy_xpbd_2d = "0.4"
+rand = {version = "0.8", features = ["getrandom", "small_rng"], default-features = false}
+
+[profile.dev]
+opt-level = 1
+
+[profile.dev.package."*"]
+opt-level = 3
+
+[package.metadata.android]
+apk_name = "flicky-frog"
+assets = "../../assets"
+build_targets = ["aarch64-linux-android", "armv7-linux-androideabi"]
+package = "com.aicacia.flicky-frog"
+resources = "../../assets/android-res"
+strip = "strip"
+
+[package.metadata.android.sdk]
+target_sdk_version = 31
+
+[package.metadata.android.application]
+icon = "@mipmap/ic_launcher"
+label = "Flicky Frog"
