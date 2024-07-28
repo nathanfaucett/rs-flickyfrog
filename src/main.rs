@@ -1,6 +1,6 @@
 use bevy::prelude::*;
 
-use flicky_frog::app::AppPlugin;
+use flickyfrog::app::AppPlugin;
 
 #[bevy_main]
 fn main() {

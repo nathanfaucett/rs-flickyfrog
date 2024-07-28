@@ -1,7 +1,7 @@
 use std::f32::consts::PI;
 
+use avian2d::prelude::*;
 use bevy::{prelude::*, window::PrimaryWindow};
-use bevy_xpbd_2d::prelude::*;
 
 use crate::{
     app::{GameState, INV_WORLD_SIZE},
@@ -152,7 +152,7 @@ pub fn player_controller(
                     .spawn((
                         SpriteBundle {
                             sprite: Sprite {
-                                color: Color::RED,
+                                color: Color::srgb(1.0, 0.0, 0.0),
                                 custom_size: Some(Vec2::new(0.1, size)),
                                 ..default()
                             },

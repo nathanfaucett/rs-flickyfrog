@@ -7,22 +7,22 @@ keywords = ["flicky", "frog", "game"]
 
 edition = "2021"
 license = "MIT/Apache-2.0"
-name = "flicky-frog"
-repository = "https://github.com/nathanfaucett/ts-flicky-frog"
+name = "flickyfrog"
+repository = "https://github.com/nathanfaucett/rs-flickyfrog"
 rust-version = "1.74"
 version = "0.1.0"
 
-default-run = "flicky-frog"
+default-run = "flickyfrog"
 
 [lib]
-name = "flicky_frog"
+name = "flickyfrog"
 
 [[bin]]
-name = "flicky-frog"
+name = "flickyfrog"
 
 [dependencies]
-bevy = {version = "0.13", features = ["dynamic_linking"]}
-bevy_xpbd_2d = "0.4"
+avian2d = "0.1"
+bevy = {version = "0.14", features = ["dynamic_linking"]}
 rand = {version = "0.8", features = ["getrandom", "small_rng"], default-features = false}
 
 [profile.dev]
@@ -32,11 +32,11 @@ opt-level = 1
 opt-level = 3
 
 [package.metadata.android]
-apk_name = "flicky-frog"
-assets = "../../assets"
+apk_name = "flickyfrog"
+assets = "./assets"
 build_targets = ["aarch64-linux-android", "armv7-linux-androideabi"]
-package = "com.aicacia.flicky-frog"
-resources = "../../assets/android-res"
+package = "com.aicacia.flickyfrog"
+resources = "./assets/android-res"
 strip = "strip"
 
 [package.metadata.android.sdk]

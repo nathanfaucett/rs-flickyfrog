@@ -1,5 +1,5 @@
+use avian2d::{math::Vector, prelude::*};
 use bevy::{prelude::*, render::camera::ScalingMode};
-use bevy_xpbd_2d::{math::Vector, prelude::*};
 
 use crate::{game::GamePlugin, splash::SplashPlugin};
 

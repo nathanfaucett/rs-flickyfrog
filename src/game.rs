@@ -1,5 +1,5 @@
+use avian2d::prelude::*;
 use bevy::{prelude::*, window::PrimaryWindow};
-use bevy_xpbd_2d::prelude::*;
 use rand::prelude::*;
 
 use crate::{
@@ -45,7 +45,7 @@ fn setup_game(
     commands.spawn((
         SpriteBundle {
             sprite: Sprite {
-                color: Color::GREEN,
+                color: Color::srgb(0.0, 1.0, 0.0),
                 custom_size: Some(Vec2::new(1.0, 1.0)),
                 ..default()
             },
@@ -65,7 +65,7 @@ fn setup_game(
     commands.spawn((
         SpriteBundle {
             sprite: Sprite {
-                color: Color::RED,
+                color: Color::srgb(1.0, 0.0, 0.0),
                 custom_size: Some(Vec2::new(10000.0, 1.0)),
                 ..default()
             },
@@ -91,7 +91,7 @@ fn setup_game(
         commands.spawn((
             SpriteBundle {
                 sprite: Sprite {
-                    color: Color::RED,
+                    color: Color::srgb(1.0, 0.0, 0.0),
                     custom_size: Some(Vec2::new(1.0, height)),
                     ..default()
                 },
